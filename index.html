@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starnes Fine Carpentry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>Starnes Fine Carpentry</h1>
+  <p>Custom Woodwork • Quality Craftsmanship • Built to Last</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#work">Past Work</a>
+  <a href="#request">Request Quote</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    We specialize in custom carpentry, cabinetry, decks, trim work, and home renovations.
+    Every project is built with precision, durability, and craftsmanship you can trust.
+  </p>
+</section>
+
+<section id="work">
+  <h2>Past Work</h2>
+  <div class="grid">
+    <div class="card">Custom Kitchen Cabinets</div>
+    <div class="card">Outdoor Deck Build</div>
+    <div class="card">Trim & Molding Work</div>
+    <div class="card">Custom Furniture Pieces</div>
+  </div>
+</section>
+
+<section id="request">
+  <h2>Request a Project</h2>
+
+  <form name="project-request" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="project-request" />
+
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <input type="text" name="address" placeholder="Address" required />
+
+    <select name="project-type" required>
+      <option value="">Select Project Type</option>
+      <option>Cabinets</option>
+      <option>Deck</option>
+      <option>Trim Work</option>
+      <option>Furniture</option>
+      <option>Renovation</option>
+    </select>
+
+    <input type="date" name="date" required />
+    <textarea name="details" placeholder="Describe your project..." rows="5" required></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+<section id="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="grid">
+    <div class="card">
+      “Amazing craftsmanship. The work exceeded expectations.”
+      <br><strong>- Sarah M.</strong>
+    </div>
+
+    <div class="card">
+      “Professional, timely, and high quality work.”
+      <br><strong>- James T.</strong>
+    </div>
+
+    <div class="card">
+      “Best carpentry service I’ve ever used.”
+      <br><strong>- Angela R.</strong>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p><strong>Phone:</strong> (555) 123-4567</p>
+  <p><strong>Email:</strong> starnesfinecarpentry@example.com</p>
+  <p><strong>Service Area:</strong> Atlanta, GA</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Starnes Fine Carpentry</p>
+</footer>
+
+</body>
+</html>
