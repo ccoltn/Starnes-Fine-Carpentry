@@ -75,3 +75,17 @@ footer {
   color: white;
   margin-top: 40px;
 }
+
+.ig-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #E1306C;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.ig-btn:hover {
+  background: #c92a5c;
+}
