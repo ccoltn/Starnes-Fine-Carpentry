@@ -43,3 +43,10 @@ activeVideo.addEventListener('ended', () => {
   changeSlide(1);
 });
 
+
+const activeSlide = document.querySelector('.slide.active');
+const video = activeSlide.querySelector('video');
+
+if (video) {
+  video.play();
+}
