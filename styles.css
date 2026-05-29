@@ -92,14 +92,13 @@ footer {
 
 
 .media-slider {
-  position: relative;
   max-width: 800px;
-  width: 100%;
-  height: 300px;
+  height: 320px;
   margin: 40px auto;
+  position: relative;
   overflow: hidden;
+  background: transparent;
 
-  background: transparent; /* key */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,28 +108,22 @@ footer {
   display: none;
   width: 100%;
   height: 100%;
+
   align-items: center;
   justify-content: center;
 }
 
 .slide.active {
-  display: block;
+  display: flex;
 }
 
-.slide img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
+.slide img,
 .slide video {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
+
   object-fit: contain;
   display: block;
 }
