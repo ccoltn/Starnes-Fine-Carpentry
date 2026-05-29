@@ -1,7 +1,9 @@
 .site-header {
-    background-color: #c4c3af; /* Change to match your image background */
-    text-align: center;
-    padding: 20px 0;
+  background-color: #c4c3af;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 .header-image {
