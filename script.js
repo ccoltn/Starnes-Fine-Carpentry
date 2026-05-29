@@ -5,8 +5,24 @@ document.querySelectorAll(".media-slider").forEach(slider => {
   const rightBtn = slider.querySelector(".arrow.right");
 
   function showSlide(index) {
-    slides.forEach(s => s.classList.remove("active"));
+    slides.forEach(slide => {
+      slide.classList.remove("active");
+
+      // PAUSE any video inside every slide
+      const video = slide.querySelector("video");
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+
     slides[index].classList.add("active");
+
+    // PLAY video if present in active slide
+    const activeVideo = slides[index].querySelector("video");
+    if (activeVideo) {
+      activeVideo.play();
+    }
   }
 
   leftBtn.addEventListener("click", () => {
