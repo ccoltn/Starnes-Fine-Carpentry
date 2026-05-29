@@ -234,14 +234,23 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
 
-  /* LOCK SLIDER AS A VISUAL FRAME */
+  /* FIX SECTION SPACING (this fixes “too far apart”) */
+  section {
+    padding: 20px 15px;
+  }
+
+  h2 {
+    margin: 10px 0;
+  }
+
   .media-slider {
     position: relative;
     height: 220px !important;
+    margin: 10px auto !important;
     overflow: hidden;
   }
 
-  /* MAKE SLIDES LAYERS, NOT BLOCK ELEMENTS */
+  /* FORCE ABSOLUTE LAYER SYSTEM */
   .slide {
     position: absolute;
     inset: 0;
@@ -252,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
-  /* FORCE MEDIA TO FILL FRAME */
+  /* FORCE CONSISTENT MEDIA */
   .slide img,
   .slide video {
     width: 100%;
@@ -261,13 +270,13 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
   }
 
-  /* FORCE ARROWS ABOVE EVERYTHING */
+  /* FIX ARROWS (MUST BE ABOVE EVERYTHING) */
   .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 9999;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     color: white;
     border: none;
     padding: 10px;
