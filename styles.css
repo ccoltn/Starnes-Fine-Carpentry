@@ -178,3 +178,10 @@ footer {
   background-color: #256628;
   transform: scale(1.05);
 }
+
+.center-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d5a27;
+  margin-bottom: 20px;
+}
