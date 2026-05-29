@@ -5,8 +5,8 @@
 }
 
 .header-image {
-    width: 200px;      /* Square size */
-    height: 200px;
+    width: 75px;      /* Square size */
+    height: 75px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
