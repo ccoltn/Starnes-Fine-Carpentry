@@ -90,6 +90,14 @@ footer {
   background: #c92a5c;
 }
 
+
+.media-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
 .slider-container {
   position: relative;
   width: 100%;
