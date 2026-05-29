@@ -38,3 +38,8 @@ const activeVideo = activeSlide.querySelector('video');
 if (activeVideo) {
   activeVideo.play();
 }
+
+activeVideo.addEventListener('ended', () => {
+  changeSlide(1);
+});
+
