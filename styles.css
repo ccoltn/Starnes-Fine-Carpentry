@@ -97,7 +97,7 @@ footer {
   height: 450px;
   margin: auto;
   overflow: hidden;
-  background: black;
+  background: transparent;
 }
 
 /* slides */
