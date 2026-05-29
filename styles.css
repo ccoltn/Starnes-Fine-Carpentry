@@ -234,32 +234,19 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
 
-  /* FORCE MOBILE SLIDER SIZE */
   .media-slider {
     height: 220px !important;
-    min-height: 220px;
     position: relative;
     overflow: hidden;
   }
 
-  /* FORCE SLIDES TO USE SAME FRAME */
-  .slide {
-    height: 100%;
-  }
-
-  .slide img,
-  .slide video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* prevents cropping on mobile */
-    display: block;
-  }
-
-  /* FIX ARROWS */
+  /* MAKE ARROWS CENTER PROPERLY */
   .arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    height: fit-content;
     z-index: 10;
     background: rgba(0,0,0,0.5);
     color: white;
@@ -275,4 +262,11 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px;
   }
 
+  .slide img,
+  .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
 }
