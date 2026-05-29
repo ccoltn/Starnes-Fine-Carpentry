@@ -118,6 +118,13 @@ footer {
   object-fit: contain;       /* shows whole image */
 }
 
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .arrow {
   position: absolute;
   top: 50%;
