@@ -7,8 +7,8 @@
 }
 
 .header-image {
-    width: 300px !important;      /* Square size */
-    height: 300px !important;
+    width: 500px !important;      /* Square size */
+    height: 500px !important;
     object-fit: contain;
     display: block;
     margin: 0 auto;
