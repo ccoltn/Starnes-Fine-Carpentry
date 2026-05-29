@@ -230,3 +230,14 @@ h1, h2, h3, h4, h5, h6 {
 .large-text {
   font-size: 1.5rem;
 }
+
+
+@media (max-width: 768px) {
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .media-slider {
+    margin-top: 10px;
+  }
+}
