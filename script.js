@@ -1,26 +1,26 @@
-let currentSlide = 0;
+document.querySelectorAll("[data-slider]").forEach(slider => {
+  let current = 0;
+  const slides = slider.querySelectorAll(".slide");
+  const leftBtn = slider.querySelector(".left");
+  const rightBtn = slider.querySelector(".right");
 
-const slides = document.querySelectorAll(".slide");
-
-function showSlide(index) {
-  slides.forEach(slide => slide.classList.remove("active"));
-
-  slides[index].classList.add("active");
-}
-
-function changeSlide(direction) {
-  currentSlide += direction;
-
-  if (currentSlide >= slides.length) {
-    currentSlide = 0;
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[index].classList.add("active");
   }
 
-  if (currentSlide < 0) {
-    currentSlide = slides.length - 1;
-  }
+  leftBtn.addEventListener("click", () => {
+    current--;
+    if (current < 0) current = slides.length - 1;
+    showSlide(current);
+  });
 
-  showSlide(currentSlide);
-}
+  rightBtn.addEventListener("click", () => {
+    current++;
+    if (current >= slides.length) current = 0;
+    showSlide(current);
+  });
+});
 
 
 function changeSlide(direction) {
