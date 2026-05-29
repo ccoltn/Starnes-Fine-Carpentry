@@ -24,11 +24,9 @@
   object-fit: cover;
 }
 
-
-.about p {
+.text-image p {
   font-size: 32px;
 }
-
 
 body {
   font-family: Arial, sans-serif;
