@@ -234,28 +234,22 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
 
-  /* HEADINGS */
-  h2 {
-    margin-bottom: 5px;
-  }
-
+  /* CRITICAL: make slider positioning stable */
   .media-slider {
-    margin-top: 5px;
     position: relative;
     overflow: hidden;
   }
 
-  /* SLIDER CONTAINER (CRITICAL) */
-  .slider-container {
-    position: relative;
-  }
-
-  /* ARROWS (CRITICAL) */
+  /* CRITICAL: arrows must be absolute */
   .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 8px;
   }
 
   .arrow.left {
@@ -266,12 +260,21 @@ h1, h2, h3, h4, h5, h6 {
     right: 10px;
   }
 
-  /* IMAGES / VIDEOS */
+  /* FIX inconsistent image/video behavior */
   .slide img,
   .slide video {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
+  }
+
+  /* OPTIONAL: tighten spacing between sections */
+  h2 {
+    margin-bottom: 5px;
+  }
+
+  .media-slider {
+    margin-top: 5px;
   }
 }
