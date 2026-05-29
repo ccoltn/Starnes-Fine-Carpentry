@@ -1,8 +1,8 @@
-document.querySelectorAll("[data-slider]").forEach(slider => {
+document.querySelectorAll(".media-slider").forEach(slider => {
   let current = 0;
   const slides = slider.querySelectorAll(".slide");
-  const leftBtn = slider.querySelector(".left");
-  const rightBtn = slider.querySelector(".right");
+  const leftBtn = slider.querySelector(".arrow.left");
+  const rightBtn = slider.querySelector(".arrow.right");
 
   function showSlide(index) {
     slides.forEach(s => s.classList.remove("active"));
