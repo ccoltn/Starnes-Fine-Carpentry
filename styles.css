@@ -241,6 +241,8 @@ h1, h2, h3, h4, h5, h6 {
 
   .media-slider {
     margin-top: 5px;
+    position: relative;
+    overflow: hidden;
   }
 
   /* SLIDER CONTAINER (CRITICAL) */
@@ -270,5 +272,6 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    display: block;
   }
 }
