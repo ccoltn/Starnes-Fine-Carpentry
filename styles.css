@@ -19,7 +19,7 @@
 }
 
 .text-image img {
-  width: 200px !important;
+  width: 300px !important;
   height: auto !important;
   object-fit: cover;
 }
