@@ -1,18 +1,14 @@
 .site-header {
   background-color: #c4c3af;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 10px;
-  overflow: visible;
 }
 
 .header-image {
-    width: 700px !important;      /* Square size */
-    height: auto !important;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
+  width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 body {
