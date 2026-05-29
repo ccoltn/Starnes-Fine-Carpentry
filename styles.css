@@ -233,6 +233,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media (max-width: 768px) {
+
+  /* HEADINGS */
   h2 {
     margin-bottom: 5px;
   }
@@ -240,22 +242,18 @@ h1, h2, h3, h4, h5, h6 {
   .media-slider {
     margin-top: 5px;
   }
-}
 
-@media (max-width: 768px) {
-.slide img,
-.slide video {
- height: 200px;
-    object-fit: contain;
-    background: #000;
+  /* SLIDER CONTAINER (CRITICAL) */
+  .slider-container {
+    position: relative;
   }
-}
 
-
-@media (max-width: 768px) {
+  /* ARROWS (CRITICAL) */
   .arrow {
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 10;
   }
 
   .arrow.left {
@@ -265,5 +263,12 @@ h1, h2, h3, h4, h5, h6 {
   .arrow.right {
     right: 10px;
   }
-}
 
+  /* IMAGES / VIDEOS */
+  .slide img,
+  .slide video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+}
