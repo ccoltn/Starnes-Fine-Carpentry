@@ -15,11 +15,11 @@
 .text-image {
   display: flex;
   align-items: center;
-  gap: 20px !important;
+  gap: 50px !important;
 }
 
 .text-image img {
-  width: 50px !important;
+  width: 200px !important;
   height: auto !important;
   object-fit: cover;
 }
