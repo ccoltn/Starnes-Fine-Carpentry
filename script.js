@@ -4,25 +4,32 @@ document.querySelectorAll(".media-slider").forEach(slider => {
   const leftBtn = slider.querySelector(".arrow.left");
   const rightBtn = slider.querySelector(".arrow.right");
 
-  function showSlide(index) {
+  function stopAllVideos() {
     slides.forEach(slide => {
-      slide.classList.remove("active");
-
-      // PAUSE any video inside every slide
-      const video = slide.querySelector("video");
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
+      const vid = slide.querySelector("video");
+      if (vid) {
+        vid.pause();
       }
     });
+  }
 
+  function playActiveVideo(index) {
+    const video = slides[index].querySelector("video");
+
+    if (video) {
+      video.play().catch(err => {
+        console.log("Video play blocked:", err);
+      });
+    }
+  }
+
+  function showSlide(index) {
+    stopAllVideos();
+
+    slides.forEach(slide => slide.classList.remove("active"));
     slides[index].classList.add("active");
 
-    // PLAY video if present in active slide
-    const activeVideo = slides[index].querySelector("video");
-    if (activeVideo) {
-      activeVideo.play();
-    }
+    playActiveVideo(index);
   }
 
   leftBtn.addEventListener("click", () => {
@@ -36,25 +43,10 @@ document.querySelectorAll(".media-slider").forEach(slider => {
     if (current >= slides.length) current = 0;
     showSlide(current);
   });
+
+  // optional: play video on first load if first slide has video
+  playActiveVideo(0);
 });
 
 
-function changeSlide(direction) {
-  slides[currentSlide].classList.remove("active");
 
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-
-  slides[currentSlide].classList.add("active");
-
-  // Pause all videos
-  document.querySelectorAll("video").forEach(video => {
-    video.pause();
-    video.currentTime = 0;
-  });
-
-  // Play video in active slide
-  const activeVideo = slides[currentSlide].querySelector("video");
-  if (activeVideo) {
-    activeVideo.play();
-  }
-}
