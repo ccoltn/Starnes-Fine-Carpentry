@@ -155,3 +155,26 @@ footer {
   height: 900px;
   border: none;
 }
+
+
+.button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.request-btn {
+  display: inline-block;
+  background-color: #2e7d32; /* green */
+  color: #f5f5dc; /* beige */
+  padding: 15px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.request-btn:hover {
+  background-color: #256628;
+  transform: scale(1.05);
+}
