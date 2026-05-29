@@ -24,3 +24,17 @@ function changeSlide(direction) {
 }
 
 showSlide(currentSlide);
+
+// Pause all videos
+document.querySelectorAll('.slide video').forEach(video => {
+  video.pause();
+  video.currentTime = 0;
+});
+
+// Play video in active slide (if there is one)
+const activeSlide = document.querySelector('.slide.active');
+const activeVideo = activeSlide.querySelector('video');
+
+if (activeVideo) {
+  activeVideo.play();
+}
