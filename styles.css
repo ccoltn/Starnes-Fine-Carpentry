@@ -12,6 +12,18 @@
   height: auto;
 }
 
+.text-image {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text-image img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
