@@ -234,39 +234,47 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
 
+  /* LOCK THE SLIDER VIEWPORT */
   .media-slider {
-    height: 220px !important;
     position: relative;
+    height: 220px !important;
     overflow: hidden;
   }
 
-  /* MAKE ARROWS CENTER PROPERLY */
-  .arrow {
+  /* FORCE ALL SLIDES INTO SAME LAYER */
+  .slide {
     position: absolute;
     top: 0;
-    bottom: 0;
-    margin: auto 0;
-    height: fit-content;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  /* CONSISTENT MEDIA HANDLING */
+  .slide img,
+  .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* TRUE CENTERING (NOW RELIABLE) */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
     background: rgba(0,0,0,0.5);
     color: white;
     border: none;
     padding: 8px;
   }
 
-  .arrow.left {
-    left: 10px;
-  }
-
-  .arrow.right {
-    right: 10px;
-  }
-
-  .slide img,
-  .slide video {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-  }
+  .arrow.left { left: 10px; }
+  .arrow.right { right: 10px; }
 }
