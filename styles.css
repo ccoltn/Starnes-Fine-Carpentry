@@ -5,9 +5,9 @@
 }
 
 .header-image {
-    width: 75px !important;      /* Square size */
-    height: 75px !important;
-    object-fit: cover;
+    width: 150px !important;      /* Square size */
+    height: 159px !important;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
 }
